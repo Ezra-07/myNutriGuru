@@ -1,0 +1,12 @@
+{
+    "name": "your-app",
+    "version": "1.0.0",
+    "scripts": {
+        "frontend": "cd frontend && npm run dev",
+        "backend": "cd backend && node server.js",
+        "start": "concurrently \"npm run frontend\" \"npm run backend\""
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
+}

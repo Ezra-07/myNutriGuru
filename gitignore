@@ -1,0 +1,60 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Build output
+dist/
+build/
+out/
+public/static/
+public/assets/
+
+# Frontend frameworks
+# React
+build/
+coverage/
+*.test.js
+*.spec.js
+*.snap
+
+# Vue
+dist/
+*.local
+*.log
+
+# Next.js
+.next/
+out/
+
+# Angular
+dist/
+*.js.map
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*~
+*.sublime-workspace
+
+# OS specific files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Other
+coverage/
+test-results/
