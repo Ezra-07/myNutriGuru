@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import CreateProfile from './components/CreateProfile';
-import Dashboard from './components/DashBoard'; // Make sure to create or import your dashboard component
+import Dashboard from './components/Dashboard';
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Routes>
@@ -14,6 +14,6 @@ const App = () => {
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;

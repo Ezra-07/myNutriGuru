@@ -10,30 +10,36 @@ const WelcomePage = () => {
   const handleLoginSuccess = async (credentialResponse) => {
     console.log("Login Success:");
     try {
+      // Include withCredentials to allow cookie handling
       const response = await axios.post('http://localhost:5000/api/auth/google', {
         credential: credentialResponse.credential,
-      });
+      }, { withCredentials: true }); // Add this line
+
+      // Check if the response has a user object
       const user = response.data.user; // Assuming the response includes user data
 
       if (user) {
-        if (!user.exists) {
-          navigate('/create-profile');
+        // Check the message returned from the backend to determine the user status
+        if (response.data.message === 'User already exists') {
+          navigate('/dashboard'); // Navigate to the dashboard
         } else {
-          navigate('/dashboard');
+          navigate('/create-profile'); // Navigate to create profile if user is new
         }
       }
     } catch (error) {
       console.error("Error logging in:", error);
+      // Optionally display an error message to the user
     }
   };
 
   const handleLoginFailure = (error) => {
-    console.log("Login Failed:");
+    console.log("Login Failed:", error);
   };
 
   return (
     <div className="welcome-page">
       <section className="hero">
+        <img src="./src/assets/logo1.png" alt="Logo" />
         <div className="hero-content">
           <h1 className="hero-title">Welcome to Nutrition Checker</h1>
           <p className="hero-subtitle">Your personalized guide to healthy eating</p>

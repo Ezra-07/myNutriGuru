@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container, NavDropdown, Image } from 'react-bootstrap';
-import './MyNavbar.css'; // Import custom CSS file
+import './MyNavbar.css'; 
 
 const MyNavbar = () => {
     const userName = "John Doe";
@@ -11,7 +11,7 @@ const MyNavbar = () => {
             <Container>
                 <Navbar.Brand>
                     <Image
-                        src={"./src/assets/logo1.png"}
+                        src={"./src/assets/logo2.png"}
                         height="250rem"
                         className="logo"
                     />

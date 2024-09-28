@@ -26,10 +26,7 @@ const CreateProfile = () => {
     e.preventDefault();
     // Store data in local storage
     localStorage.setItem('userProfile', JSON.stringify(formData));
-    console.log('Profile created with data:', formData);
     alert('Profile created successfully!');
-    
-    // Use navigate here
     navigate('/dashboard');
   };
 

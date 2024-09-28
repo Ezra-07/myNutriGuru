@@ -7,11 +7,5 @@
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0"
-  },
-  "scripts": {
-  "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-  "backend": "cd backend && node server.js",
-  "frontend": "cd frontend && npm run dev"
-}
-
+  }
 }
