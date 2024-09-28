@@ -1,0 +1,50 @@
+  .container-p{
+    max-width: 800px;                   
+    margin: auto;                      
+    padding: 20px;                    
+    background-color: rgb(190, 210, 190);
+    border-radius: 8px;                
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);             
+    margin-left: 25em;               
+  }
+  
+  h2 {
+    text-align: center;               
+    color: #333;                       
+    margin-bottom: 20px;             
+  }
+  
+  form {
+    display: flex;                    
+    flex-direction: column;           
+    width: 100%;                       
+  }
+  
+  label {
+    margin: 10px 0 5px;             
+    text-align: left;                 
+    width: 100%;                       
+  }
+  
+  input, select {
+    padding: 10px;                     
+    border: 1px solid #ccc;         
+    border-radius: 4px;               
+    margin-bottom: 15px;              
+    width: 100%;                       
+    box-sizing: border-box;            
+  }
+  
+  button {
+    padding: 10px;                    
+    background-color: #28a745;       
+    color: white;                    
+    border: none;                      
+    border-radius: 4px;               
+    cursor: pointer;                  
+    width: 100%;                     
+  }
+  
+  button:hover {
+    background-color: #218838;        
+  }

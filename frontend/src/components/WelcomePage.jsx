@@ -2,18 +2,33 @@ import React from 'react';
 import './WelcomePage.css';
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
 
 const WelcomePage = () => {
   const navigate = useNavigate();
 
-  const handleLoginSuccess = (credentialResponse) => {
+  const handleLoginSuccess = async (credentialResponse) => {
     console.log("Login Success:");
-    navigate('/dashboard'); 
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/google', {
+        credential: credentialResponse.credential,
+      });
+      const user = response.data.user; // Assuming the response includes user data
+
+      if (user) {
+        if (!user.exists) {
+          navigate('/create-profile');
+        } else {
+          navigate('/dashboard');
+        }
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
   };
 
   const handleLoginFailure = (error) => {
-    console.log("Login Failed:", error);
+    console.log("Login Failed:");
   };
 
   return (
@@ -32,7 +47,7 @@ const WelcomePage = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="features">
         <div className="features-intro">
           <h2>How We Help You Eat Healthier</h2>
