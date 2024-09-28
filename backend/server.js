@@ -57,8 +57,10 @@ app.post('/api/auth/google', async (req, res) => {
         picture: data.picture,
       });
       console.log('New user created:', user); 
+      //logic for new user data
     } else {
       console.log('User already exists:', user); 
+      //exsiting
     }
 
     // Generate JWT for the session

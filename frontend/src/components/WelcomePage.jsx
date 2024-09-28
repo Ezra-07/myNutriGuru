@@ -9,9 +9,7 @@ const WelcomePage = () => {
 
   const handleLoginSuccess = (credentialResponse) => {
     console.log("Login Success:");
-    // Optionally store user info or token
-    // localStorage.setItem('token', credentialResponse.credential);
-    navigate('/dashboard'); // Redirect to dashboard on success
+    navigate('/dashboard'); 
   };
 
   const handleLoginFailure = (error) => {
