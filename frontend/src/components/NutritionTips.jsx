@@ -39,7 +39,7 @@ const NutritionTips = () => {
 
     return (
         <div className="nutrition-tips">
-            <h2>Nutrition Tips</h2>
+            <h2>Nutrition Bytes</h2>
             <div className="tips-container">
                 {tips.map((tip) => (
                     <div className="tip-card" key={tip.id}>

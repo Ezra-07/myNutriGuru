@@ -1,6 +1,7 @@
 // src/components/DetailsPage.js
 import React, { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
+import './DetailsPage.css';
 
 const DetailsPage = () => {
     const { id } = useParams(); // Get the topic id from the URL parameters
@@ -37,7 +38,7 @@ const DetailsPage = () => {
                 
                 <p>Intermittent fasting is a simple, flexible approach to improve health and support weight loss.</p>
             `,
-            image: '/image2.jpg',
+            image: '/Intermittent_Fasting_2.jpg',
         },
         2: {
             title: 'Nutri Score',
@@ -68,7 +69,7 @@ const DetailsPage = () => {
                 <h3>Conclusion</h3>
                 <p>Nutri Score is a valuable tool that simplifies the assessment of nutritional quality, enabling consumers to make informed dietary choices. By promoting transparency and encouraging healthier eating patterns, Nutri Score plays a significant role in improving public health and wellness.</p>
                 `,
-            image: '/image2.jpg',
+            image: '/nutriscore_2.jpg',
         },
         3: {
             title: 'Mind diet',
@@ -111,7 +112,7 @@ const DetailsPage = () => {
                 <h3>Conclusion</h3>
                 <p>The MIND Diet is a practical approach to eating that focuses on foods that support brain health and may reduce the risk of cognitive decline. By incorporating these principles into your daily routine, you can promote better cognitive function and overall wellness.</p>
                 `,
-            image: '/image3.jpg',
+            image: '/mind-diet-2.jpg',
         },
         4: {
             id: 4,
@@ -151,7 +152,8 @@ const DetailsPage = () => {
 
                     <h3>Conclusion</h3>
                     <p>Millets are truly a nutritional treasure, offering a wealth of health benefits while promoting sustainable farming practices. By integrating millets into our diets, we can improve our health and contribute to a more sustainable food system. Embracing these ancient grains not only enriches our meals but also honors a tradition of wholesome, environmentally friendly eating.</p>
-                    `
+                    `,
+            image: '/millets_2.jpg',
         },
     };
 
@@ -173,7 +175,7 @@ const DetailsPage = () => {
             ) : (
                 <p>Topic not found!</p>
             )}
-        </div>
+        </div>                  
     );
 };
 

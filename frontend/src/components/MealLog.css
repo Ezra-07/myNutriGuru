@@ -41,12 +41,11 @@ button:hover {
     background-color: #218838;
 }
 
-ul {
+#meal{
     list-style-type: none;
     padding: 0;
 }
-
-li {
+#meal li{
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ccc;

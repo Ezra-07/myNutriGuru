@@ -108,7 +108,7 @@ const MealLog = () => {
                 </form>
 
                 <h3>Meal Logs</h3>
-                <ul>
+                <ul id='meal'>
                     {mealLogs.map((log) => (
                         <li key={log.id}>
                             {log.meal}: {log.amount} g consumed - {log.calories} kcal, {log.protein} g protein, {log.fat} g fat, {log.carbs} g carbs

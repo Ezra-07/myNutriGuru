@@ -1,0 +1,21 @@
+.details-page img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 500px;
+    border-radius: 2rem;
+}
+.details-page{
+    background-color: rgb(192, 233, 192);
+}
+.details-page h2,
+.details-page h3,
+.details-page ul,
+.details-page li,
+.details-page p {
+    font-weight: normal; 
+}
+
+.details-page ul {
+    list-style-type: disc; 
+}

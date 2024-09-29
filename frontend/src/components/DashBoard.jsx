@@ -72,7 +72,7 @@ const nutritionTips = [
             <img src="/first.png" id='main'/>
             <main>
                 <section className="cards-section">
-                    <h2>Nutrition Topics</h2>
+                    <h2>Nutrition Digest</h2>
                     <div className="cards-container">
                             {nutritionTopics.map((topic, index) => (
                                 <Card key={index} topic={topic} />

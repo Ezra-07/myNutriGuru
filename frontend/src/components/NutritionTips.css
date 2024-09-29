@@ -65,7 +65,7 @@
 .tip-card ul {
   padding-left: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
-  list-style-type: none; /* Remove bullets */
+  list-style-type: disc; /* Remove bullets */
 }
 
 .tip-card ul li {
