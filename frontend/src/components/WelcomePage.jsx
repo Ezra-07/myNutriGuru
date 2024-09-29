@@ -3,21 +3,23 @@ import './WelcomePage.css';
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useUser } from './UserContext';
 
 const WelcomePage = () => {
   const navigate = useNavigate();
-
+  const { setUser } = useUser();
   const handleLoginSuccess = async (credentialResponse) => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/google', {
         credential: credentialResponse.credential,
       });
-      const user = response.data.user; 
+      const userData = response.data.user; 
+      setUser(userData);
       if (response.status === 201) {
-        console.log('User created:', user);
+        console.log('User created:');
         navigate('/create-profile');
       } else if (response.status === 200) {
-        console.log('User already exists:', user);
+        console.log('User already exists:');
         navigate('/dashboard');
       }
     } catch (error) {

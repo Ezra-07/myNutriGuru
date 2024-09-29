@@ -1,0 +1,21 @@
+/* ImageSlider.css */
+.image-slider {
+    width: 70%;
+    margin: auto;
+    height: 800px;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+
+.slick-dots li button:before {
+    color: #238d23; /* Match the footer's green */
+}

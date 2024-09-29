@@ -1,0 +1,64 @@
+/* src/components/style.css */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center; /* Center the heading */
+    font-size: 60px;
+    font-family: 'Karla', sans-serif;
+    font-weight: lighter;
+}
+
+.slider-frame {
+    position: relative;
+    overflow: hidden;
+    height: 800px; /* Fixed height */
+    width: 90%; /* Make it responsive */
+    max-width: 1200px; /* Maximum width */
+    margin: 20px auto; /* Centering */
+}
+
+.slide-images {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+    height: 100%; /* Take full height */
+}
+
+.img-container {
+    min-width: 100%; /* Each image takes full width */
+    height: 100%; /* Ensure full height */
+}
+
+.img-container img {
+    width: 100%; /* Responsive images */
+    height: 100%; /* Ensure full height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(186, 238, 177, 0.7); /* Slightly transparent */
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px; /* Position left */
+}
+
+.next {
+    right: 10px; /* Position right */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid on hover */
+}
