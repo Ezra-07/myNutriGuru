@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './CreateProfile.css'; 
+import './CreateProfile.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Import axios
 
 const CreateProfile = () => {
-  // State to store form data
   const [formData, setFormData] = useState({
     name: '',
     age: '',
@@ -13,22 +13,33 @@ const CreateProfile = () => {
     phone: '',
   });
 
-  // Initialize the useNavigate hook at the top level
   const navigate = useNavigate();
 
-  // Handle form input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Store data in local storage
-    localStorage.setItem('userProfile', JSON.stringify(formData));
-    alert('Profile created successfully!');
-    navigate('/dashboard');
+  
+    try {
+      const response = await axios.post('http://localhost:5000/api/profile', {
+        name: formData.name,
+        age: formData.age,
+        gender: formData.gender,
+        weight: formData.weight,
+        height: formData.height,
+        phone: formData.phone,
+      });
+  
+      console.log('Profile created successfully:', response.data);
+      alert('Profile created successfully!');
+      navigate('/dashboard');
+    } catch (error) {
+      console.error("Error creating profile:", error);
+    }
   };
+  
 
   return (
     <div className="container-p">

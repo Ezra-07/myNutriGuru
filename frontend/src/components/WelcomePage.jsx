@@ -8,32 +8,25 @@ const WelcomePage = () => {
   const navigate = useNavigate();
 
   const handleLoginSuccess = async (credentialResponse) => {
-    console.log("Login Success:");
     try {
-      // Include withCredentials to allow cookie handling
       const response = await axios.post('http://localhost:5000/api/auth/google', {
         credential: credentialResponse.credential,
-      }, { withCredentials: true }); // Add this line
-
-      // Check if the response has a user object
-      const user = response.data.user; // Assuming the response includes user data
-
-      if (user) {
-        // Check the message returned from the backend to determine the user status
-        if (response.data.message === 'User already exists') {
-          navigate('/dashboard'); // Navigate to the dashboard
-        } else {
-          navigate('/create-profile'); // Navigate to create profile if user is new
-        }
+      });
+      const user = response.data.user; 
+      if (response.status === 201) {
+        console.log('User created:', user);
+        navigate('/create-profile');
+      } else if (response.status === 200) {
+        console.log('User already exists:', user);
+        navigate('/dashboard');
       }
     } catch (error) {
-      console.error("Error logging in:", error);
-      // Optionally display an error message to the user
+      console.error('Error during login:', error);
     }
   };
 
   const handleLoginFailure = (error) => {
-    console.log("Login Failed:", error);
+    console.error('Login Failed:', error);
   };
 
   return (
