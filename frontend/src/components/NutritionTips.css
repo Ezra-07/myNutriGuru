@@ -1,8 +1,11 @@
 /* Nutrition Tips Styles */
+*{
+  border: none;
+}
 .nutrition-tips {
   position: relative;
   padding: 20px;
-  max-width: 100%; /* Ensure it spans the full width */
+  max-width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -26,7 +29,7 @@
 
 .tip-card {
   display: flex;
-  width: 100%; /* Ensure the card takes up the full width */
+  width: 100%;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -39,14 +42,14 @@
 }
 
 .tip-image {
-  width: 35%; /* Image takes 35% of the card's width */
+  width: 35%;
   object-fit: cover;
-  height: 100%; /* Ensure the image covers the full height */
+  height: 100%;
   padding: 20px;
 }
 
 .tip-card div {
-  width: 60%; /* Text container takes up 60% */
+  width: 60%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -60,29 +63,29 @@
 }
 
 .tip-card ul {
-  padding-left: 20px;
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  list-style-type: none; /* Remove bullets */
 }
 
 .tip-card ul li {
-  font-size: 1rem;
+  padding: 5px 0; /* Add spacing */
   color: #555;
   line-height: 1.5;
-  margin-bottom: 10px;
-  list-style-type: disc; /* Add bullet points */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .tip-card {
-    flex-direction: column; /* Stack the image and text vertically */
+      flex-direction: column;
   }
 
   .tip-image {
-    width: 100%; /* Full width for image on small screens */
-    height: auto;
+      width: 100%;
+      height: auto;
   }
 
   .tip-card div {
-    width: 100%; /* Full width for text on small screens */
+      width: 100%;
   }
 }

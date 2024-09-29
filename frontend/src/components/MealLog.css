@@ -1,39 +1,40 @@
 .meal-log-container {
-    max-width: 400px;
-    margin: auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: #f4f4f9;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2, h3 {
     text-align: center;
+    color: #333;
 }
 
-form div {
-    margin-bottom: 15px;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
+    padding: 10px 15px;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
@@ -43,4 +44,18 @@ button:hover {
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-log-container .chart-container {
+    margin-top: 40px;
 }

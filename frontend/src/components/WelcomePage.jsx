@@ -33,12 +33,12 @@ const WelcomePage = () => {
 
   return (
     <div className="welcome-page">
-      <section className="hero">
+      <section className="whero">
         <img src="./src/assets/logo1.png" alt="Logo" />
-        <div className="hero-content">
-          <h1 className="hero-title">Welcome to Nutrition Checker</h1>
-          <p className="hero-subtitle">Your personalized guide to healthy eating</p>
-          <div className="hero-buttons">
+        <div className="whero-content">
+          <h1 className="whero-title">Welcome to Nutrition Checker</h1>
+          <p className="whero-subtitle">Your personalized guide to healthy eating</p>
+          <div className="whero-buttons">
             <GoogleLogin
               onSuccess={handleLoginSuccess}
               onFailure={handleLoginFailure}

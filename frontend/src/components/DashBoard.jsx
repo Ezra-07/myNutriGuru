@@ -3,9 +3,7 @@ import MyNavbar from './MyNavbar'
 import './DashBoard.css';
 import Card from './Card';
 import NutritionTips from './NutritionTips';
-import ImageSlider from './ImageSlider'; // Import the ImageSlider component
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import DetailsPage from './DetailsPage'; // Page for "Learn More" button
 import Footer from './Footer';
 function DashBoard() {
@@ -35,34 +33,43 @@ function DashBoard() {
         id: 4,
     },
 ];
-
 const nutritionTips = [
     {
-        image: '/image2.jpg',
-        title: 'Stay Hydrated',
-        description: 'Drinking water is essential for your health. Aim for at least 8 glasses a day.',
+        id: 1,
+        title: "Importance of Vitamin C",
+        image: "/vitamina-C.jpg", // Ensure the image path is correct
+        content: [
+            "Helps in tissue repair.",
+            "Boosts the immune system.",
+            "Aids in iron absorption."
+        ]
     },
     {
-        image: '/image2.jpg',
-        title: 'Incorporate Whole Foods',
-        description: 'Focus on whole, unprocessed foods to get the nutrients your body needs.',
+        id: 2,
+        title: "Benefits of Leafy Greens",
+        image: "/LeafyGreen.jpg", // Ensure the image path is correct
+        content: [
+            "Rich in vitamins and minerals.",
+            "Low in calories.",
+            "Improves heart health."
+        ]
     },
     {
-        image: '/image2.jpg',
-        title: 'Limit Sugar Intake',
-        description: 'Try to limit added sugars to improve your overall health and wellness.',
-    },
-    {
-        image: '/image2.jpg',
-        title: 'Practice Mindful Eating',
-        description: 'Pay attention to what you eat and savor each bite to enjoy your meals more.',
-    },
+        id: 3,
+        title: "Power of Omega-3 Fatty Acids",
+        image: "/Omega3.jpg", // Ensure the image path is correct
+        content: [
+            "Supports heart health.",
+            "Reduces inflammation.",
+            "Improves brain function."
+        ]
+    }
 ];
   return (
     <>
       <MyNavbar/>
         <div className="DashBoard">
-            <ImageSlider />
+            <img src="/first.png" id='main'/>
             <main>
                 <section className="cards-section">
                     <h2>Nutrition Topics</h2>

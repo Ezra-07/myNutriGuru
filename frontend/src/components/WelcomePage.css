@@ -8,21 +8,21 @@
     padding: 1rem;
   }
   
-  .hero {
+  .whero {
     background-color: #4caf50;
     color: white;
   }
-  .hero-title {
+  .whero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
   
-  .hero-subtitle {
+  .whero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
   
-  .hero-buttons{
+  .whero-buttons{
     display: flex;
     justify-content: center;
     align-items: center;

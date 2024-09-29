@@ -52,8 +52,7 @@
   background: rgba(0, 0, 0, 0.5); /* Add a background to the button */
   border: none;              /* Remove border */
   border-radius: 5px;        /* Rounded corners for button */
-  cursor: pointer;
-  margin-top: 175px;          /* Push the button to the bottom of the card */
+  cursor: pointer;        /* Push the button to the bottom of the card */
 }
 
 .learn-more:hover {
