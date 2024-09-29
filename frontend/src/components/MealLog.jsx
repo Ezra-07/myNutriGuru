@@ -11,7 +11,7 @@ const MealLog = () => {
     const [mealName, setMealName] = useState('');
     const [amountConsumed, setAmountConsumed] = useState(0);
     const [mealLogs, setMealLogs] = useState([]);
-    const [apiKey] = useState('H2l+1NwWlNflH1D4HjpzAw==vCOQ3bVXkjImEh9r'); 
+    const [apiKey] = useState('YOUR_API_KEY'); //for saftey
 
     const fetchNutritionData = async (mealName) => {
         try {
